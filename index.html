@@ -1,1 +1,239 @@
-Coming Soon
+<!doctype html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="generator" content="Jekyll v3.8.5">
+  <title>DECKARD Agent</title>
+
+  <link rel="canonical" href="http://deckardagent.github.io">
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="index.css">
+
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+  <meta name="og:title" content="DECKARD Agent">
+  
+  <meta name="description" content="Embodied Decision Making using Language Guided World Modelling">
+
+  <link href="https://getbootstrap.com/docs/4.3/examples/jumbotron/jumbotron.css" rel="stylesheet">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</head>
+
+<body style="padding-top: 0px;">
+
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #029b9e;">
+  <a class="navbar-brand" href="#">DECKARD Agent </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbars">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="https://arxiv.org/abs/2301.12050" target="_blank">Paper</a>
+      <a class="nav-item nav-link" href="" target="_blank">Code Coming Soon</a>
+    </div>
+  </div>
+</nav>
+
+<main role="main">
+
+	<!-- Main jumbotron -->
+	<div class="jumbotron">
+		<div class="container">
+			<h1 class="display-5">Do Embodied Agents Dream of Pixelated Sheep?</h1>
+			<h3>Embodied Decision Making using Language Guided World Modelling</h3>
+			<h6>
+				<table>
+					<tr>
+						<td width="250"><a href="http://kolbynottingham.com/" target="_blank">Kolby Nottingham</a></td>
+						<td width="250"><a href="http://prithvirajva.com/" target="_blank">Prithviraj Ammanabrolu</a></td>
+						<td width="250"><a href="https://www.alanesuhr.com/" target="_blank">Alane Suhr</a></td>
+					</tr>
+					<tr>
+						<td><a href="https://homes.cs.washington.edu/~yejin/" target="_blank">Yejin Choi</a></td>
+						<td><a href="https://homes.cs.washington.edu/~hannaneh/" target="_blank">Hannaneh Hajishirzi</a></td>
+						<td><a href="https://sameersingh.org/" target="_blank">Sameer Singh</a></td>
+						<td><a href="https://royf.org/" target="_blank">Roy Fox</a></td>
+					</tr>
+				</table>
+			</h6>
+
+			<p> Reinforcement learning (RL) agents typically learn tabula rasa, without prior knowledge of the world, which makes learning complex tasks with sparse rewards difficult.
+				If initialized with knowledge of high-level subgoals and transitions between subgoals, RL agents could utilize this <em>Abstract World Model</em> (AWM) for planning and exploration.
+				We propose using few-shot large language models (LLMs) to hypothesize an AWM, that is tested and verified during exploration, to improve sample efficiency in embodied RL agents.
+				Our <strong>DECKARD</strong> agent applies LLM-guided exploration to item crafting in Minecraft in two phases: (1) the <em>Dream</em> phase where the agent uses an LLM to decompose a task into a sequence of subgoals, the hypothesized AWM; and (2) the <em>Wake</em> phase where the agent learns a modular policy for each subgoal and verifies or corrects the hypothesized AWM on the basis of its experiences.
+				Our method of hypothesizing an AWM with LLMs and then verifying the AWM based on agent experience not only increases sample efficiency over contemporary methods by an order of magnitude but is also robust to and corrects errors in the LLM-successfully blending noisy internet-scale information from LLMs with knowledge grounded in environment dynamics.
+			</p>
+			
+			<p>
+				<a class="btn btn-info btn-lg homeButton" href="https://arxiv.org/abs/2301.12050" role="button" target="_blank">Paper on ArXiv&raquo;</a> 
+				<a class="btn btn-info btn-lg homeButton" href="" role="button" target="_blank">GitHub (Coming Soon)</a>
+			</p>
+
+		</div>
+	</div>
+
+</main>
+
+<div class="container">
+	<center>
+		<h2>DECKARD</h2>
+			<table>
+				<tr>
+					<td>
+						<div>
+							<center>
+								<img src="images/deckard.png" alt="DECKARD Diagram">
+							</center>
+							<p class="section_text"> 
+								We present DECKARD 
+								(<strong>DEC</strong>ision-making for <strong>K</strong>nowledgable <strong>A</strong>utonomous 
+								<strong>R</strong>einforcement-leanring <strong>D</strong>reamers), an agent that hypothesizes an 
+								<em>Abstract World Model</em> (AWM) over subgoals by few-shot prompting an LLM, then exploits the 
+								AWM for exploration and verifies the AWM with grounded experience.
+							</p>
+						</div>
+					</td>
+				</tr>
+			</table>
+	</center>
+	<hr>
+</div>
+
+<div class="container">
+	<center>
+		<h2>Minecraft Technology Tasks</h2>
+			<table>
+				<tr>
+					<td>
+						<div>
+							<center>
+								<img src="images/stone_pickaxe_graph.gif" alt="DECKARD Gif" width="800px">
+							</center>
+							<p class="section_text"> 
+								DECKARD uses a few-shot LLM to predict a transition model over high-level states, in this case Minecraft inventory items.
+							</p>
+						</div>
+					</td>
+				</tr>
+			</table>
+	</center>
+	<hr>
+</div>
+
+<div class="container">
+	<center>
+		<h2><em>Dream</em> and <em>Wake</em> Phases</h2>
+			<table>
+				<tr>
+					<td>
+						<div>
+							<center>
+								<img src="images/iteration.gif" alt="DECKARD Gif" width="800px">
+							</center>
+							<p class="section_text"> 
+								Each iteration, DECKARD alternates between Dream and Wake phases.
+								During the Dream phase, DECKARD samples the next goal predicted by the LLM.
+								Then, during the Wake phase, it attempts to reach the new node and verify the accuracy of the predicted transition. 
+							</p>
+						</div>
+					</td>
+				</tr>
+			</table>
+	</center>
+	<hr>
+</div>
+
+<div class="container">
+	<center>
+		<h2>Results</h2>
+			<table>
+				<tr>
+					<td>
+						<div>
+							<center>
+								<img src="images/results.png" alt="Graph Growth Plot" width="600px">
+							</center>
+							<p class="section_text"> 
+								 DECKARD uses LLM guidance to improve exploration, halving the time it takes our agent to discover complex recipes.
+							</p>
+						</div>
+					</td>
+				</tr>
+			</table>
+	</center>
+	<hr>
+</div>
+
+<div class="container">
+	<center>
+		<h2>Demo</h2>
+			<table>
+				<tr>
+					<td>
+						<div>
+							<center>
+								<iframe width="700" height="440" src="images/demo.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							</center>
+							<p class="section_text"> 
+								 Our final agent learns modular policies for each node verified during the Dream/Wake phases.
+								 DECKARD's modularity makes it possible to collect and craft arbitrary Minecraft items at inference time.
+							</p>
+						</div>
+					</td>
+				</tr>
+			</table>
+	</center>
+	<hr>
+</div>
+
+<div class="container">
+  <center>
+		<h2>Citation</h2>
+	</center>
+  <div>
+		<center>
+			<p>If you find this work useful, please cite:</p>
+		</center>
+	</div>
+	<div class="card bg-light" style="max-width: 40rem;">
+		<div class="card-body">
+			<p class="card-text"> 
+				<code id="cite">
+					<font color="black"> 
+					@article{DECKARD2023, <br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title = {Do Embodied Agents Dream of Pixelated Sheep?:<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Embodied Decision Making using Language Guided<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;World Modelling},<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;author = {Kolby Nottingham and Prithviraj Ammanabrolu and<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Alane Suhr and Yejin Choi and Hannaneh Hajishirzi and<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sameer Singh and Roy Fox},<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;journal = {arXiv preprint arXiv:2301.12050},<br> 
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;year = {2023},<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url  = {https://arxiv.org/abs/2301.12050}}
+					</font>
+				</code>
+			</p>
+		</div>
+	</div>
+  <hr>
+</div>
+	  
+  <div id="groupContainer">
+	<img src="images/uci.png" class="groupLogo" height="100">
+	<img src="images/uw.png" class="groupLogo" height="60">
+	<img src="images/ai2.png" class="groupLogo" height="120">
+  </div>
+  <br>
+
+<footer>
+ <center><p>Email correspondence to: <a href="http://kolbynottingham.com/">Kolby Nottingham</a></p></center>
+</footer>
+</body>
+</html>
