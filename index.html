@@ -36,7 +36,7 @@
     <div class="navbar-nav">
       <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
       <a class="nav-item nav-link" href="https://arxiv.org/abs/2301.12050" target="_blank">Paper</a>
-      <a class="nav-item nav-link" href="" target="_blank">Code Coming Soon</a>
+      <a class="nav-item nav-link" href="https://github.com/DeckardAgent/deckard" target="_blank">Code</a>
     </div>
   </div>
 </nav>
@@ -64,16 +64,16 @@
 				</table>
 			</h6>
 
-			<p> Reinforcement learning (RL) agents typically learn tabula rasa, without prior knowledge of the world, which makes learning complex tasks with sparse rewards difficult.
-				If initialized with knowledge of high-level subgoals and transitions between subgoals, RL agents could utilize this <em>Abstract World Model</em> (AWM) for planning and exploration.
-				We propose using few-shot large language models (LLMs) to hypothesize an AWM, that is tested and verified during exploration, to improve sample efficiency in embodied RL agents.
-				Our <strong>DECKARD</strong> agent applies LLM-guided exploration to item crafting in Minecraft in two phases: (1) the <em>Dream</em> phase where the agent uses an LLM to decompose a task into a sequence of subgoals, the hypothesized AWM; and (2) the <em>Wake</em> phase where the agent learns a modular policy for each subgoal and verifies or corrects the hypothesized AWM on the basis of its experiences.
-				Our method of hypothesizing an AWM with LLMs and then verifying the AWM based on agent experience not only increases sample efficiency over contemporary methods by an order of magnitude but is also robust to and corrects errors in the LLM-successfully blending noisy internet-scale information from LLMs with knowledge grounded in environment dynamics.
+			<p> Reinforcement learning (RL) agents typically learn tabula rasa, without prior knowledge of the world.
+				However, if initialized with knowledge of high-level subgoals and transitions between subgoals, RL agents could utilize this <em>Abstract World Model</em> (AWM) for planning and exploration.
+				We propose using few-shot large language models (LLMs) to hypothesize an AWM, that will be verified through world experience, to improve sample efficiency of RL agents.
+				Our <strong>DECKARD</strong> agent applies LLM-guided exploration to item crafting in Minecraft in two phases: (1) the <em>Dream</em> phase where the agent uses an LLM to decompose a task into a sequence of subgoals, the hypothesized AWM; and (2) the <em>Wake</em> phase where the agent learns a modular policy for each subgoal and verifies or corrects the hypothesized AWM.
+				Our method of hypothesizing an AWM with LLMs and then verifying the AWM based on agent experience not only increases sample efficiency over contemporary methods by an order of magnitude but is also robust to and corrects errors in the LLM, successfully blending noisy internet-scale information from LLMs with knowledge grounded in environment dynamics.
 			</p>
 			
 			<p>
-				<a class="btn btn-info btn-lg homeButton" href="https://arxiv.org/abs/2301.12050" role="button" target="_blank">Paper on ArXiv&raquo;</a> 
-				<a class="btn btn-info btn-lg homeButton" href="" role="button" target="_blank">GitHub (Coming Soon)</a>
+				<a class="btn btn-info btn-lg homeButton" href="https://arxiv.org/abs/2301.12050" role="button" target="_blank">Paper&raquo;</a> 
+				<a class="btn btn-info btn-lg homeButton" href="https://github.com/DeckardAgent/deckard" role="button" target="_blank">Code&raquo;</a>
 			</p>
 
 		</div>
@@ -179,7 +179,9 @@
 					<td>
 						<div>
 							<center>
-								<iframe width="700" height="440" src="images/demo.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								<video width="700" height="440" controls>
+								  <source src="images/demo.mp4" type="video/mp4">
+								</video>
 							</center>
 							<p class="section_text"> 
 								 Our final agent learns modular policies for each node verified during the Dream/Wake phases.
